@@ -3,6 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn essential Japanese phrases for travel. Master 2,000+ expressions for restaurants, transportation, emergencies, and more. Works offline!">
+    <meta name="keywords" content="Japanese phrases, Japan travel, learn Japanese, travel dictionary, Japanese language, travel app">
+    <meta name="author" content="Japan Travel Dictionary">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Japan Travel Dictionary - Learn Japanese for Travel">
+    <meta property="og:description" content="Master 2,000+ Japanese phrases for every travel situation. From restaurants to emergencies, speak Japanese confidently!">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Japan Travel Dictionary">
+    <meta name="twitter:description" content="Learn essential Japanese phrases for travel. Works offline!">
+    
     <title>Japan Travel Dictionary - Learn Japanese for Travel</title>
     <style>
         * {
@@ -133,9 +155,22 @@
             <p class="tagline">Learn Essential Japanese for Travel</p>
             <p style="margin: 20px 0;">Master 2,000+ Japanese phrases for every travel situation. From restaurants to emergencies, speak Japanese confidently!</p>
             
-            <!-- App Store Badge - Replace with actual App Store link when available -->
+            <!-- 
+                ⚠️ App Store Badge - UPDATE AFTER APP IS PUBLISHED ⚠️
+                
+                STEP 1: Get your App Store URL from App Store Connect
+                STEP 2: Replace the <div> below with this code:
+                
+                <div class="download-badge">
+                    <a href="YOUR_APP_STORE_URL_HERE" target="_blank" rel="noopener noreferrer">
+                        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1604361600" alt="Download on the App Store">
+                    </a>
+                </div>
+                
+                Example: https://apps.apple.com/app/idXXXXXXXXXX
+            -->
             <div class="download-badge">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1604361600" alt="Download on the App Store">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1604361600" alt="Download on the App Store" style="cursor: default;">
             </div>
         </header>
         
@@ -182,17 +217,39 @@
             <div class="link-section">
                 <a href="support.html">Support</a>
                 <a href="privacy.html">Privacy Policy</a>
-                <a href="#contact">Contact</a>
             </div>
             
             <div style="margin-top: 30px;">
                 <h3 id="contact">Contact Us</h3>
-                <p>Email: <a href="mailto:official.japantravel@gmail.com">official.japantravel@gmail.com</a></p>
+                <p>Email: <a href="#" id="contact-email" onclick="sendEmail(); return false;" style="cursor: pointer;">Click to reveal email</a></p>
+                <noscript>
+                    <p style="color: #666; font-size: 0.9em; margin-top: 10px;">
+                        Please enable JavaScript to see the email address, or contact us through the App Store reviews.
+                    </p>
+                </noscript>
                 <p style="margin-top: 10px; color: #666;">We read every message and respond within 24 hours!</p>
             </div>
             
             <p style="margin-top: 40px; color: #999;">© 2025 Japan Travel Dictionary. All rights reserved.</p>
         </footer>
     </div>
+    
+    <!-- Email Protection Script -->
+    <script>
+        // Email obfuscation to prevent spam bots
+        function sendEmail() {
+            var parts = ['official.japantravel', 'gmail.com'];
+            var email = parts[0] + '@' + parts[1];
+            
+            // Update the link text and href
+            var linkElement = document.getElementById('contact-email');
+            linkElement.href = 'mailto:' + email;
+            linkElement.textContent = email;
+            linkElement.onclick = null; // Remove the onclick after first click
+            
+            // Open email client
+            window.location.href = 'mailto:' + email;
+        }
+    </script>
 </body>
 </html>

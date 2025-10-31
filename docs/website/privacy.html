@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Japan Travel Dictionary. Learn how we protect your data and respect your privacy.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
     <title>Privacy Policy - Japan Travel Dictionary</title>
     <style>
         * {
@@ -114,8 +122,8 @@
         <p><strong>Purpose:</strong> To show relevant advertisements and measure ad performance.</p>
         <p>For more information:</p>
         <ul>
-            <li><a href="https://policies.google.com/privacy" style="color: #FF6B9D;">Google's Privacy Policy</a></li>
-            <li><a href="https://support.google.com/admob/answer/9012903" style="color: #FF6B9D;">Google AdMob Partners</a></li>
+            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: #FF6B9D;">Google's Privacy Policy</a></li>
+            <li><a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener noreferrer" style="color: #FF6B9D;">Google AdMob Partners</a></li>
         </ul>
         
         <h4>Apple In-App Purchase</h4>
@@ -170,15 +178,38 @@
         
         <h2>Contact Us</h2>
         <p>If you have questions about this Privacy Policy, contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:official.japantravel@gmail.com" style="color: #FF6B9D;">official.japantravel@gmail.com</a></p>
+        <p><strong>Email:</strong> <a href="#" id="contact-email" onclick="sendEmail(); return false;" style="color: #FF6B9D; cursor: pointer;">Click to reveal email</a></p>
+        <noscript>
+            <p style="color: #666; font-size: 0.9em; margin-top: 10px;">
+                Please enable JavaScript to see the email address, or contact us through the App Store.
+            </p>
+        </noscript>
         
         <h2>Third-Party Services</h2>
         <ul>
-            <li><strong>Google AdMob:</strong> <a href="https://policies.google.com/privacy" style="color: #FF6B9D;">Privacy Policy</a></li>
-            <li><strong>Apple App Store:</strong> <a href="https://www.apple.com/legal/privacy/" style="color: #FF6B9D;">Privacy Policy</a></li>
+            <li><strong>Google AdMob:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: #FF6B9D;">Privacy Policy</a></li>
+            <li><strong>Apple App Store:</strong> <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer" style="color: #FF6B9D;">Privacy Policy</a></li>
         </ul>
         
         <a href="index.html" class="back-link">← Back to Home</a>
     </div>
+    
+    <!-- Email Protection Script -->
+    <script>
+        // Email obfuscation to prevent spam bots
+        function sendEmail() {
+            var parts = ['official.japantravel', 'gmail.com'];
+            var email = parts[0] + '@' + parts[1];
+            
+            // Update the link text and href
+            var linkElement = document.getElementById('contact-email');
+            linkElement.href = 'mailto:' + email;
+            linkElement.textContent = email;
+            linkElement.onclick = null; // Remove the onclick after first click
+            
+            // Open email client
+            window.location.href = 'mailto:' + email;
+        }
+    </script>
 </body>
 </html>
